@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base{
+  *{
+    @apply font-Inter
+  }
+  body{
+      @apply bg-drip-white
+  }
+  .custom-container{
+    @apply mx-4 md:container md:mx-auto 
+  }
+
+}
