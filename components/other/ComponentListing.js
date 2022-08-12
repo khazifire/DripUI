@@ -40,7 +40,7 @@ const ComponentListing = ({featured=0}) => {
     return ( 
         <div className='grid grid-cols-2 gap-4 my-1 md:grid-cols-4 xl:grid-cols-6'>
             {(list||components)?.map((component) =>(
-                <Link href={`/components/${(component.count)?component.name :'#'}`}>
+                <Link key={component.name} href={`/components/${(component.count)?component.name :'#'}`}>
                     <a  className={`${(!component.count)?'opacity-60 pointer-events-none' :''} group relative inline-flex flex-col px-5 py-6  font-medium capitalize text-drip-black text-2xl  border-gray-light shadow-inner shadow-drip-black/30 rounded-lg hover:shadow-drip-black/50`}>
                         <i className={`${component.icon} text-3xl`}></i>
                         {component.name}
@@ -52,7 +52,7 @@ const ComponentListing = ({featured=0}) => {
                                     'coming soon'}
                         </span>
 
-                        <i class="ri-external-link-line absolute right-3 top-2 text-[17px] group-hover:animate-spin"></i>
+                        <i className="ri-external-link-line absolute right-3 top-2 text-[17px] group-hover:animate-spin"></i>
                     </a>
                 </Link>
             ))}
