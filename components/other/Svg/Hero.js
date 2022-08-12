@@ -2,7 +2,7 @@ const Hero = ({style}) => {
     return ( 
         <svg className={style} viewBox="0 0 240 324" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 
-    <g id="Introduction" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Introduction" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="variations" transform="translate(-1086.000000, -1082.000000)">
             <g id="images" transform="translate(126.000000, 110.000000)">
                 <g id="a-person/bust" transform="translate(960.000000, 972.000000)">

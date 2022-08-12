@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useRef,useState } from 'react';
-import HeroSection from '../components/HeroSection'
+import ComponentListing from '../components/other/ComponentListing'
+import HeroSection from '../components/other/HeroSection'
 
 
 export default function Home() {
@@ -19,37 +19,10 @@ export default function Home() {
 
         <section>
           <h2 className='text-3xl'>Components</h2>
-          <p class="mt-2 text-lg text-drip-gray-dark">UI Tailwind CSS components, that will help you save your time</p>
+          <p className="mt-2 text-lg text-drip-gray-dark">UI Tailwind CSS components, that will help you save your time</p>
 
-          <div className='grid grid-cols-6 gap-4 my-4'>
-            <Link href={'/components/buttons'}>
-                  <a  className="flex flex-col  px-5 py-6  font-medium  text-drip-black text-2xl  border-gray-light shadow-inner shadow-drip-black/30 rounded-lg hover:shadow-drip-black/50">
-                      <i class="ri-toggle-line text-3xl"></i>
-                      Buttons
-                      <span className='text-sm'>8 Component</span>
-                  </a>
-            </Link>
-
-            <Link href={'#'}>
-                  <a  className="opacity-60 pointer-events-none flex flex-col  px-5 py-6  font-medium  text-drip-black text-2xl  border-gray-light shadow-inner shadow-drip-black/30 rounded-lg hover:shadow-drip-black/50">
-                      <i class="ri-layout-top-line text-3xl"></i>
-                      Headers
-                      <span className='text-sm'>Comming soon</span>
-                  </a>
-            </Link>
-
-            <Link href={'#'}>
-                  <a  className="opacity-60 pointer-events-none flex flex-col  px-5 py-6  font-medium  text-drip-black text-2xl  border-gray-light shadow-inner shadow-drip-black/30 rounded-lg hover:shadow-drip-black/50">
-                      <i class="ri-layout-bottom-line text-3xl"></i>
-                      Footers
-                      <span className='text-sm'>Comming soon</span>
-                  </a>
-            </Link>
-
-          </div>
+          <ComponentListing featured={6}/>
   
-
-
         </section>
       </main>
 

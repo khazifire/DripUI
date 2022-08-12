@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useRef,useState } from 'react';
-
+import { BasicBtns } from '../../components/drip/buttons/basicBtsns';
+import PageHeading from '../../components/other/PageHeadings';
 
 
 export default function Buttons() {
@@ -25,99 +26,6 @@ export default function Buttons() {
       }, 4000)
   };
 
-  const BasicBtns =[
-    {
-      'type':'Basic Btns (default)',
-      'category':[
-        { 
-          'id':'Basic-default-1',
-          'name':'primary',
-          'style':'text-white bg-gray-700 hover:bg-gray-700/90',
-          'icon':'white'
-        },
-        {
-          'id':'Basic-default-2',
-          'name':'secondary',
-          'style':'text-gray-700 bg-yellow-400 hover:bg-yellow-400/90'
-        },
-        {
-          'id':'Basic-default-3',
-          'name':'tertiary',
-          'style':'text-gray-700 border-gray-300 border-2 hover:border-gray-800'
-        },
-        {
-          'id':'Basic-default-4',
-          'name':'other',
-          'style':'text-gray-700 hover:text-yellow-400',
-          'iconHover':'group-hover:fill-yellow-400'
-        },
-      ],
-    },
-    {
-      'type':'Basic Btns (rounded)',
-      'category':[
-        {
-          'id':'Basic-rounded-1',
-          'name':'primary',
-          'style':'text-white bg-gray-700 rounded hover:bg-gray-700/90',
-          'icon':'white'
-        },
-        {
-          'id':'Basic-rounded-2',
-          'name':'secondary',
-          'style':'text-gray-700 bg-yellow-400 rounded hover:bg-yellow-400/90'
-        },
-        {
-          'id':'Basic-rounded-3',
-          'name':'tertiary',
-          'style':'text-gray-700 border-gray-300 border-2 rounded hover:border-gray-700'
-        },
-      ],
-      
-    },{
-      'type':'Basic Btns (rounded-lg)',
-      'category':[
-        {
-          'id':'Basic-roundedLg-1',
-          'name':'primary',
-          'style':'text-white bg-gray-700 rounded-lg hover:bg-gray-700/90',
-          'icon':'white'
-        },
-        {
-          'id':'Basic-roundedLg-2',
-          'name':'secondary',
-          'style':'text-gray-700 bg-yellow-400 rounded-lg hover:bg-yellow-400/90'
-        },
-        {
-          'id':'Basic-roundedLg-3',
-          'name':'tertiary',
-          'style':'text-gray-700 border-gray-300 border-2 rounded-lg hover:border-gray-700'
-        },
-      ],
-    },
-    {
-      'type':'Basic Btns (rounded-2xl)',
-      'category':[
-        {
-          'id':'Basic-roundedXl-1',
-          'name':'primary',
-          'style':'text-white bg-gray-700 rounded-2xl hover:bg-gray-700/90',
-          'icon':'white'
-        },
-        {
-          'id':'Basic-roundedXl-2',
-          'name':'secondary',
-          'style':'text-gray-700 bg-yellow-400 rounded-2xl hover:bg-yellow-400/90'
-        },
-        {
-          'id':'Basic-roundedXl-3',
-          'name':'tertiary',
-          'style':'text-gray-700 border-gray-300 border-2 rounded-2xl hover:border-gray-700'
-        },
-      ]
-    }
-  ]
-
 
   return (
     <div className="">
@@ -128,24 +36,22 @@ export default function Buttons() {
       </Head>
 
       <main className="flex flex-col gap-8">
-        <article className='md:w-1/2 text-drip-black '>
-          <h1 className='font-semibold text-5xl font-Cursive'>Button Components</h1>
-          <p class="mt-4 text-lg text-drip-gray-dark">The button component is commonly used in application and websites to launch an action or link to other pages. <span className='italic'>DripUI</span> offers a wide range of button styles and sizes, including outlined buttons, multiple colors and sizes, buttons with icons, and more.</p>
-
-
-          <p className='mt-4'><span className='font-semibold'>How to use: </span>simply click on the button you like</p>
-        </article>
-       
-        <section className='grid grid-cols-1 md:grid-cols-2 gap-16'>
+        <PageHeading 
+          title={'Button Components'}
+          alt={'button'}
+          description={'The button component is commonly used in application and websites to launch an action or link to other pages. DripUI offers a wide range of button styles and sizes, including outlined buttons, multiple colors and sizes, buttons with icons, and more.'} 
+        />
+    
+        <section className='grid grid-cols-1 gap-16 md:grid-cols-2'>
 
                 <div className='flex flex-col gap-4'>
                   {BasicBtns.map((btns) =>(
                     <div key={btns.type} className='flex flex-col gap-2 '>
                     <h2>{btns.type}</h2>
 
-                        <div className='flex flex-wrap gap-8 shadow-inner shadow-drip-black/30 rounded-lg p-4 w-full'>
+                        <div className='flex flex-wrap w-full gap-8 p-4 rounded-lg shadow-inner shadow-drip-black/30'>
                           {btns.category.map((btn) =>(
-                              <div key={btn.id} className='flex flex-col gap-1 relative '>
+                              <div key={btn.id} className='relative flex flex-col gap-1 '>
                                 {/* button */}
                                   <div>
                                         <button ref={btnAreaRef} onClick={()=>copyToClipboard(btn.id)} className={`text-sm px-5 py-3  ${btn.style}`}
@@ -153,7 +59,7 @@ export default function Buttons() {
                                         </button>
                                   </div>
                                 {/* success msg on copy */}
-                                  {(CopySuccess && btnId==btn.id)? <span className='inline-flex gap-1 text-sm py-2 absolute -bottom-8'>Copied! <i class="ri-chat-smile-2-line animate-bounce"></i> </span>:""}
+                                  {(CopySuccess && btnId==btn.id)? <span className='absolute inline-flex gap-1 py-2 text-sm -bottom-8'>Copied! <i className="ri-chat-smile-2-line animate-bounce"></i> </span>:""}
                               </div>
                           ))}
                       </div>
@@ -167,18 +73,18 @@ export default function Buttons() {
                     <div key={btns.type} className='flex flex-col gap-2 '>
                     <h2>{btns.type} + Icon</h2>
 
-                        <div className='flex flex-wrap gap-8 shadow-inner shadow-drip-black/30 rounded-lg p-4 w-full'>
+                        <div className='flex flex-wrap w-full gap-8 p-4 rounded-lg shadow-inner shadow-drip-black/30'>
                           {btns.category.map((btn) =>(
-                              <div key={btn.id} className='flex flex-col gap-1 relative '>
+                              <div key={btn.id} className='relative flex flex-col gap-1 '>
                                 {/* button */}
                                   <div>
                                         <button ref={btnAreaRef} onClick={()=>copyToClipboard(`${btn.id}Icon`)} className={`text-sm px-4 py-3 group inline-flex items-center ${btn.style}`}
                                           > Get Started
-                                          <svg className={`flex-shrink-0 w-4 h-4 ml-3 fill-${btn.icon} ${btn.iconHover} group-hover:translate-x-1`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+                                          <svg className={`flex-shrink-0 w-4 h-4 ml-3 ${btn.icon} ${btn.iconHover} group-hover:translate-x-1`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
                                         </button>
                                   </div>
                                 {/* success msg on copy */}
-                                  {(CopySuccess && btnId==`${btn.id}Icon`)? <span className='inline-flex gap-1 text-sm py-2 absolute -bottom-8'>Copied! <i class="ri-chat-smile-2-line animate-bounce"></i> </span>:""}
+                                  {(CopySuccess && btnId==`${btn.id}Icon`)? <span className='absolute inline-flex gap-1 py-2 text-sm -bottom-8'>Copied! <i className="ri-chat-smile-2-line animate-bounce"></i> </span>:""}
                               </div>
                           ))}
                       </div>

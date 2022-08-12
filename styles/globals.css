@@ -22,7 +22,7 @@ a {
 
 @layer base{
   *{
-    @apply font-Inter
+    @apply font-Inter leading-relaxed
   }
   body{
       @apply bg-drip-white

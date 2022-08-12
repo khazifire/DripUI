@@ -9,18 +9,16 @@ const Header = () => {
                           <a className="text-3xl font-bold font-Cursive">DripUI</a>
                       </Link>
 
-                      <Link href="/">
+                      <Link href="/components">
                           <a className="border-l-2 border-drip-black/20 pl-3 text-lg">Components</a>
                       </Link>
-
-                      {/* <Link href="/"> */}
-                          <a disabled className="pl-2 text-lg text-drip-black/20 pointer-events-none">//Web Designs</a>
-                      {/* </Link> */}
+                      
+                          <a disabled className="pl-2 text-lg text-drip-black/20 pointer-events-none">Web Designs</a>
+                    
                   </div>
 
                   <div className="">
-                      {/* <a title="share on twitter" class="inline-flex items-center gap-3 px-2 py-4 text-base tracking-tight transition duration-1000 ease-in-out transform lg:text-sm xl:text-base xl:px-6 text-cadet hover:text-ultramarine focus:outline-none focus:text-oyster md:my-0 lg:ml-auto" href="https://twitter.com/intent/tweet?url=http://dripUi.vercel.app/&text=Hello%world.">Share<span class="sr-only sm:not-sr-only">on Twitter</span></a> */}
-                      <a target="_blank" className="inline-flex items-center gap-2 group" href="https://twitter.com/intent/tweet?url=https://khazifire.com&text=DripUI%20is%20a%20collection%20of%20free%20Tailwind%20CSS%20components%20that%20can%20be%20used%20in%20your%20next%20project.%20%0A-%20By%20@khazifire%0A"><i class="ri-twitter-line text-lg group-hover:-rotate-12 "></i> Share it on twitter</a>
+                      <a target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 group" href="https://twitter.com/intent/tweet?url=https://khazifire.com&text=DripUI%20is%20a%20collection%20of%20free%20Tailwind%20CSS%20components%20that%20can%20be%20used%20in%20your%20next%20project.%20%0A-%20By%20@khazifire%0A"><i className="ri-twitter-line text-lg group-hover:-rotate-12 "></i> Share it on twitter</a>
                      
                   </div>
               </nav>

@@ -1,5 +1,5 @@
-import Hero from "./Svgs/Hero";
-import Arrow from "./Svgs/icons/doodleArrow";
+import Hero from "./Svg/Hero";
+import Arrow from "./Svg/icons/doodleArrow";
 
 const HeroSection = () => {
     return ( 
