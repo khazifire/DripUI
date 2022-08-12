@@ -36,7 +36,7 @@ const ComponentListing = ({featured=0}) => {
        }
     },[featured]);
 
-    console.log(list)
+
     return ( 
         <div className='grid grid-cols-2 gap-4 my-1 md:grid-cols-4 xl:grid-cols-6'>
             {(list||components)?.map((component) =>(

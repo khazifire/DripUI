@@ -19,7 +19,7 @@ export default function Buttons() {
         setCopySuccess(true);
         setBtnId(buttonId)
       } catch (error) {
-        console.log(error)
+        setCopySuccess(false);
       }
       setTimeout(()=>{
         setCopySuccess(false)
