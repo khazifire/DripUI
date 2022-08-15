@@ -41,28 +41,23 @@ export const BasicBtns =[
             'name':'tertiary',
             'style':'text-gray-700 border-gray-300 border-2 rounded-lg hover:border-gray-700'
           },
+          {
+            'id':'Basic-roundedXl-1',
+            'name':'primary',
+            'style':'text-white bg-gray-700 rounded-2xl hover:bg-gray-700/90',
+            'icon':'fill-white'
+          },
+          {
+            'id':'Basic-roundedXl-2',
+            'name':'secondary',
+            'style':'text-gray-700 bg-yellow-400 rounded-2xl hover:bg-yellow-400/90'
+          },
+          {
+            'id':'Basic-roundedXl-3',
+            'name':'tertiary',
+            'style':'text-gray-700 border-gray-300 border-2 rounded-2xl hover:border-gray-700'
+          },
       ],
     },
-    {
-      'type':'Rounded Btns',
-      'category':[
-        {
-          'id':'Basic-roundedXl-1',
-          'name':'primary',
-          'style':'text-white bg-gray-700 rounded-2xl hover:bg-gray-700/90',
-          'icon':'fill-white'
-        },
-        {
-          'id':'Basic-roundedXl-2',
-          'name':'secondary',
-          'style':'text-gray-700 bg-yellow-400 rounded-2xl hover:bg-yellow-400/90'
-        },
-        {
-          'id':'Basic-roundedXl-3',
-          'name':'tertiary',
-          'style':'text-gray-700 border-gray-300 border-2 rounded-2xl hover:border-gray-700'
-        },
-      ]
-    }
   ]
 

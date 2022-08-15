@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useRef,useState } from 'react';
 import { BasicBtns } from '../../components/drip/buttons/basicBtsns';
+import { ColoredShadowBtns } from '../../components/drip/buttons/coloredShadowBtns';
 import Meta from '../../components/layout/meta';
 import PageHeading from '../../components/other/PageHeadings';
 
@@ -11,10 +12,10 @@ export default function Buttons() {
   const [btnId, setBtnId] = useState();
 
 
-  
   const copyToClipboard = async (buttonId) => {
     setCopySuccess(false);
-      try {
+    try {
+        console.log("hello")
         await navigator.clipboard.writeText(btnAreaRef.current.outerHTML);
         setCopySuccess(true);
         setBtnId(buttonId)
@@ -64,9 +65,7 @@ export default function Buttons() {
                     
                   </div>
                   ))}
-                </div>
-
-                <div className='flex flex-col gap-4'>
+             
                   {BasicBtns.map((btns) =>(
                     <div key={btns.type} className='flex flex-col gap-2 '>
                     <h2>{btns.type} + Icon</h2>
@@ -90,6 +89,34 @@ export default function Buttons() {
                   </div>
                   ))}
                 </div>
+
+                <div className='flex flex-col gap-4 '>
+                  {ColoredShadowBtns.map((btns) =>(
+                      <div key={btns.type} className='flex flex-col gap-2 '>
+                      <h2>{btns.type}</h2>
+
+                          <div className='flex flex-wrap w-full gap-8 p-4 rounded-lg shadow-inner shadow-drip-black/30'>
+                            {btns.category.map((btn) =>(
+                                <div key={btn.id} className='relative flex flex-col gap-1 '>
+                                    <div>
+                                          <button ref={btnAreaRef} onClick={()=>copyToClipboard(btn.id)} className={`px-5 py-3 text-sm text-center transition-all duration-100 shadow-lg hover:shadow-xl hover:scale-105 rounded-xl ${btn.style}`}
+                                            > Get Started
+                                          </button>
+                                    </div>
+                                  {/* success msg on copy */}
+                                  {console.log(btnId== btn.id)}
+                                    {(CopySuccess && btnId == btn.id)? <span className='absolute inline-flex gap-1 py-2 text-sm -bottom-8'>Copied! <i className="ri-chat-smile-2-line animate-bounce"></i> </span>:""}
+                                </div>
+                            ))}
+                        </div>
+                      
+                    </div>
+                    ))}
+
+                 </div>
+                      
+                        
+   
 
         </section>
     </>

@@ -6,8 +6,14 @@ const ComponentListing = ({featured=0}) => {
     const components =[
         {
             'name':'buttons',
-            'count':4,
+            'count':3,
             'icon': 'ri-toggle-line',
+            'featured':true
+        },
+        {
+            'name':'cards',
+            'count':4,
+            'icon':'ri-refund-line',
             'featured':true
         },
         {
@@ -22,12 +28,7 @@ const ComponentListing = ({featured=0}) => {
             'icon': 'ri-layout-bottom-line',
             'featured':false
         },
-        {
-            'name':'cards',
-            'count':undefined,
-            'icon':'ri-refund-line',
-            'featured':true
-        }
+      
     ]
 
     useEffect(() => {

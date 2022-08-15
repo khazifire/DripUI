@@ -8,20 +8,20 @@ module.exports = {
     extend:{
       colors: {
         'drip':{
-          'black':'#222831',
+          'black':'#141b1f',
           'gray': {
             'light':'#EEEEEE',
             'dark':'#393E46'
           },
           'yellow': '#f8c238',
-          'white': '#FAFAFA',
+          'white': '#ffffff',
         },
         transparent: 'transparent',
         current: 'currentColor',
       },
     },
     fontFamily: {
-      Inter :['Inter', 'sans-serif'],
+      Raleway :['Raleway', 'sans-serif'],
       Cursive: ['Caveat', 'cursive'],
       CursiveBrush: ['Caveat Brush', 'cursive'],
     },
