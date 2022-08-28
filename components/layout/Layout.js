@@ -10,6 +10,7 @@ const Layout = ({children}) => {
             <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <link rel="icon" href="/favicon.png" />
+        <script async defer data-website-id="52d4c6f4-8d44-4d9d-be00-396c5eb611b4" src="https://stats.khazifire.com/umami.js"></script>
         </Head>
         <div className="flex flex-col min-h-screen">
             <Header />
