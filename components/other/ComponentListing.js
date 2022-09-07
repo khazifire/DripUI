@@ -41,7 +41,7 @@ const ComponentListing = ({featured=0}) => {
     return ( 
         <div className='grid grid-cols-2 gap-4 my-1 md:grid-cols-4 xl:grid-cols-6'>
             {(list||components)?.map((component) =>(
-                <Link key={component.name} href={`/components/${(component.count)?component.name :'#'}`}>
+                <Link key={component.name} href={`/docs/${(component.count)?component.name :'#'}`}>
                     <a  className={`${(!component.count)?'opacity-60 pointer-events-none' :''} group component-listing-a `}>
                         <i className={`${component.icon} text-3xl`}></i>
                         {component.name}
