@@ -9,7 +9,7 @@ const Header = () => {
                           <a className="text-2xl font-bold md:text-3xl font-Cursive">DripUI</a>
                       </Link>
 
-                      <Link href="/components">
+                      <Link href="/docs">
                           <a className="pl-3 text-sm border-l-2 md:text-lg border-drip-black/20 hover:text-drip-black/80">Components</a>
                       </Link>
                       
