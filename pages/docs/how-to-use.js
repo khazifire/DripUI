@@ -21,6 +21,7 @@ export default function Installation() {
           title={'Installation Process'}
           alt={''}
           description={'Coming soon'} 
+          isComponent={false}
         />
       
         <section>
