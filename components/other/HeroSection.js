@@ -3,7 +3,7 @@ import Arrow from "./Svg/icons/doodleArrow";
 
 const HeroSection = () => {
     return ( 
-        <section className='flex flex-col sm:items-center sm:justify-center sm:flex-row'>
+      <section className='flex flex-col sm:items-center sm:justify-center sm:flex-row' >
           <div className='xl:ml-32'>
             <Hero style="w-48 md:w-48 lg:w-80" />
           </div>
