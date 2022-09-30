@@ -17,7 +17,7 @@ const Header = () => {
                     
                   </div>
 
-                  <div className="flex flex-row gap-4">
+                  <div className="flex flex-row gap-4 items-center">
                     <Link href="/docs/how-to-use">
                          <a className="pl-3 text-sm border-l-2 md:text-lg border-drip-black/20 hover:text-drip-black/80">How to use</a>
                     </Link>
