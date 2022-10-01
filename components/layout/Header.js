@@ -22,13 +22,16 @@ const Header = () => {
 							Components
 						</a>
 					</Link>
-
 					<a
 						disabled
 						className="pl-2 text-sm pointer-events-none md:text-lg text-drip-black/20"
 					>
 						Web Designs
 					</a>
+          
+           <Link href="/docs/how-to-use">
+                         <a className="pr-3 text-sm border-r-2 md:text-lg border-drip-black/20 hover:text-drip-black/80">How to use</a>
+                    </Link>
 				</div>
 
 				<div className="">
@@ -45,6 +48,7 @@ const Header = () => {
 			</nav>
 		</header>
 	);
+
 }
  
 export default Header;
