@@ -20,7 +20,7 @@ export default function Buttons() {
           document.querySelector(`#${buttonId}`).outerHTML
         );
         setCopySuccess(true);
-        setBtnId(buttonId)
+        setBtnId(buttonId)  
       } catch (error) {
         setCopySuccess(false);
       }
