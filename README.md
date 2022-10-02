@@ -56,3 +56,13 @@ Say you wanted to add a new collection of components. `Testimonials` for example
 ## License
 This project adopts the [MIT License](https://opensource.org/licenses/MIT) and is open to all contributions.
 
+## 💪🏽 Thanks to all Contributors
+
+Thanks a lot for spending your time helping DripUI grow. Thanks a lot! Keep being awesome🍻
+
+[![Contributors](https://contrib.rocks/image?repo=khazifire/DripUI)](https://github.com/khazifire/DripUI/graphs/contributors)
+
+## 🙏🏽 Support
+
+This project needs a star️ from you. Don't forget to leave a star✨
+
