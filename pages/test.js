@@ -40,7 +40,7 @@ export default function Test() {
         </ul>
         <label
           htmlFor="check"
-          className="lg:hidden w-10 h-1 relative rounded-full bg-white after:w-10 after:h-1 after:rounded-full after:bg-white before:w-10 before:h-1 before:rounded-full before:bg-white after:absolute after:top-2 before:-top-2 before:absolute cursor-pointer"
+                  className="lg:hidden w-10 h-1 relative rounded-full bg-white after:w-10 after:h-1 after:rounded-full after:bg-white before:w-10 before:h-1 before:rounded-full before:bg-white after:absolute after:top-2 before:-top-2 before:absolute cursor-pointer peer-checked:before:top-0 peer-checked:after:top-0 peer-checked:after:rotate-45 peer-checked:before:-rotate-45  after:transition-transform after:duration-500 before:transition-transform before:duration-500 ease-in peer-checked:bg-transparent"
         ></label>
       </nav>
     </>
