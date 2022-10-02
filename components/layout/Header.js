@@ -24,9 +24,8 @@ const Header = () => {
 
                     <a target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 pr-3 text-sm md:text-lg group hover:text-drip-black/80 border-r-2 border-drip-black/20" href="https://twitter.com/intent/tweet?url=https://khazifire.com&text=DripUI%20is%20a%20collection%20of%20free%20Tailwind%20CSS%20components%20that%20can%20be%20used%20in%20your%20next%20project.%20%0A-%20By%20@khazifire%0A"><i className="text-lg ri-twitter-line group-hover:-rotate-12 "></i> Share on twitter</a>
                      
-                    <Link href="https://github.com/khazifire/DripUI">
-                        <i className="ri-github-line text-xl hover:cursor-pointer"></i>
-                    </Link>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/khazifire/DripUI"><i className="text-lg ri-github-line group-hover:scale-50 hover:cursor-pointer"></i></a>
+   
                   </div>
               </nav>
           </header>
