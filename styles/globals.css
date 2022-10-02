@@ -31,7 +31,7 @@ a {
     @apply flex h-16 py-2 border-t-2 border-drip-gray-light  justify-center items-center text-white text-lg mt-auto
   }
   .custom-container{
-    @apply mx-4 md:container md:mx-auto 
+    @apply mx-8 md:container md:mx-auto 
   }
   .component-listing-a{
     @apply relative inline-flex flex-col px-5 py-6  font-medium capitalize text-drip-black text-2xl  shadow-inner shadow-drip-black/30 rounded-lg hover:shadow-drip-black/50
