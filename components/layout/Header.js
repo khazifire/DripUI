@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
     return ( 
-        <header className="sticky top-0 w-full border-b-2 bg-drip-white border-drip-gray-light ">
+        <header className="sticky top-0 w-full border-b-2 z-20 bg-drip-white border-drip-gray-light ">
               <nav className="flex flex-row justify-between py-6 custom-container">
                   <div className="flex flex-row items-center gap-4">
                       <Link href="/">
