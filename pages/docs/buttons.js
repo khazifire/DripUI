@@ -7,7 +7,7 @@ import PageHeading from '../../components/other/PageHeadings';
 
 
 export default function Buttons() {
-  const btnAreaRef = useRef(null);
+  // const btnAreaRef = useRef(null);
   const [CopySuccess, setCopySuccess] = useState(false);
   const [btnId, setBtnId] = useState();
 
@@ -16,7 +16,9 @@ export default function Buttons() {
     setCopySuccess(false);
     try {
         console.log("hello")
-        await navigator.clipboard.writeText(btnAreaRef.current.outerHTML);
+        await navigator.clipboard.writeText(
+          document.querySelector(`#${buttonId}`).outerHTML
+        );
         setCopySuccess(true);
         setBtnId(buttonId)
       } catch (error) {
@@ -53,8 +55,13 @@ export default function Buttons() {
                               <div key={btn.id} className='relative flex flex-col gap-1 '>
                                 {/* button */}
                                   <div>
-                                        <button ref={btnAreaRef} onClick={()=>copyToClipboard(btn.id)} className={`text-sm px-5 py-3  ${btn.style}`}
-                                          > Get Started 
+                                        <button
+                                          id={ btn.id }
+                                          // ref={btnAreaRef}
+                                          onClick={()=>copyToClipboard(btn.id)}
+                                          className={`text-sm px-5 py-3  ${btn.style}`}
+                                        >
+                                          Get Started
                                         </button>
                                   </div>
                                 {/* success msg on copy */}
@@ -75,8 +82,13 @@ export default function Buttons() {
                               <div key={btn.id} className='relative flex flex-col gap-1 '>
                                 {/* button */}
                                   <div>
-                                        <button ref={btnAreaRef} onClick={()=>copyToClipboard(`${btn.id}Icon`)} className={`text-sm px-4 py-3 group inline-flex items-center ${btn.style}`}
-                                          > Get Started
+                                        <button
+                                          id={ `${btn.id}Icon` }
+                                          // ref={btnAreaRef}
+                                          onClick={()=>copyToClipboard(`${btn.id}Icon`)}
+                                          className={`text-sm px-4 py-3 group inline-flex items-center ${btn.style}`}
+                                        >
+                                          Get Started
                                           <svg className={`flex-shrink-0 w-4 h-4 ml-3 ${btn.icon} ${btn.iconHover} group-hover:translate-x-1`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
                                         </button>
                                   </div>
@@ -99,8 +111,13 @@ export default function Buttons() {
                             {btns.category.map((btn) =>(
                                 <div key={btn.id} className='relative flex flex-col gap-1 '>
                                     <div>
-                                          <button ref={btnAreaRef} onClick={()=>copyToClipboard(btn.id)} className={`px-5 py-3 text-sm text-center transition-all duration-100 shadow-lg hover:shadow-xl hover:scale-105 rounded-xl ${btn.style}`}
-                                            > Get Started
+                                          <button
+                                            id={ btn.id }
+                                            // ref={btnAreaRef}
+                                            onClick={()=>copyToClipboard(btn.id)}
+                                            className={`px-5 py-3 text-sm text-center transition-all duration-100 shadow-lg hover:shadow-xl hover:scale-105 rounded-xl ${btn.style}`}
+                                          >
+                                            Get Started
                                           </button>
                                     </div>
                                   {/* success msg on copy */}
