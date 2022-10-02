@@ -49,7 +49,7 @@ export default function Navbar({ navbar }) {
         ))}
         <button
           onClick={copyToClipboard}
-          className="rounded-lg ring-2 w-fit py-3 px-6 mx-auto ring-drip-black hover:bg-drip-black hover:text-white transition-colors duration-500 ease-in font-bold"
+          className="rounded-lg ring-2 w-fit py-3 px-6 mx-auto ring-black hover:bg-black hover:text-white transition-colors duration-500 ease-in font-bold"
           >
           Copy To clipboard
         </button>
