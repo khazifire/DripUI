@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function Test() {
   return (
     <>
-      <nav className="flex justify-between items-center relative bg-gray-600 py-3 lg:px-12 px-6 text-white w-10/12 mx-auto">
+      <nav className="flex justify-between items-center relative bg-drip-black py-3 lg:px-12 px-6 text-white w-10/12 mx-auto">
         <input type={"checkbox"} id="check" className="hidden peer" />
-        <div className="w-16 h-16 basis-16 rounded-full bg-slate-200 flex items-center justify-center">
+        <div className="w-16 h-16 basis-16 rounded-full bg-white text-drip-black flex items-center justify-center">
           Logo
         </div>
               <ul className="lg:flex lg:translate-x-0 lg:peer-checked:static absolute lg:static -translate-x-[100vh] lg:basis-3/5 justify-evenly font-bold peer-checked:translate-x-0 top-[88px] transition-transform duration-500 left-0 right-0  bg-black lg:bg-transparent">
