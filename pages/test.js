@@ -11,7 +11,7 @@ export default function Test() {
               <ul className="lg:flex lg:translate-x-0 lg:peer-checked:static absolute lg:static -translate-x-[100vh] lg:basis-3/5 justify-evenly font-bold peer-checked:translate-x-0 top-[88px] transition-transform duration-500 left-0 right-0  bg-black lg:bg-transparent">
           <li>
             <Link href={"/"}>
-              <span className="p-6 cursor-pointer flex lg:p-0 hover:bg-gray-500 transition-colors duration-700 ease-in">
+              <span className="p-6 cursor-pointer flex lg:p-0 lg:hover:bg-inherit hover:bg-gray-500 transition-colors duration-700 ease-in">
                 About
               </span>
             </Link>
