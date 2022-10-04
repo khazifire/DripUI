@@ -5,13 +5,13 @@ export const ColoredShadowBtns =[
         { 
           'id':'colored-shadow-1',
           'name':'primary',
-          'style':'text-white  bg-gray-700  hover:bg-gray-700/90 shadow-bg-gray-600/30',
+          'style':'text-white px-5 py-3 text-sm text-center transition-all duration-100 shadow-lg hover:shadow-xl hover:scale-105 rounded-xl bg-gray-700  hover:bg-gray-700/90 shadow-bg-gray-600/30',
           'icon':'fill-white'
         },
         {
           'id':'colored-shadow-2',
           'name':'secondary',
-          'style':'text-gray-700  bg-yellow-400  hover:bg-yellow-400/90 shadow-yellow-300/30'
+          'style':'text-gray-700 px-5 py-3 text-sm text-center transition-all duration-100 shadow-lg hover:shadow-xl hover:scale-105 rounded-xl  bg-yellow-400  hover:bg-yellow-400/90 shadow-yellow-300/30'
         },
       ],
     },
