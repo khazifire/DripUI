@@ -6,7 +6,10 @@ The most elegant code for a component you want, is one click away :)
 ## :computer: Site Overview
 You can check out the live site [here](http://dripui.vercel.app/)
 
-To copy the code for a component, all you need to do is click on it. Hope the gif helps :)
+To copy the code for a component, all you need to do is click on it :)
+
+![Screenshot of button components page on dripui](https://user-images.githubusercontent.com/81039882/193884729-cda99fc7-e944-45f7-a24b-2545e0c516f6.png)
+
 
 ## :hammer: Tech Stack
 This project is a product of:
