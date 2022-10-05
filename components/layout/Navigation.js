@@ -14,7 +14,7 @@ import {HiOutlineMenu} from 'react-icons/hi'
     const ref = useRef(null)
     useOutsideClick(ref, setDefault)
 
-    const styleMobile = `${isOpen ? 'flex absolute flex-col items-center justify-evenly mt-2 ml-[-40vw] bg-black text-white p-3 w-[50vw] h-screen' : 'hidden'}`
+    const styleMobile = `${isOpen ? 'flex absolute flex-col justify-evenly items-end mt-2 ml-[-31vw] bg-black text-white p-3 w-[40vw]' : 'hidden'}`
     function handleOnClick() {
         setisOpen(!isOpen)
     }
