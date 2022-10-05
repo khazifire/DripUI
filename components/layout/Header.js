@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Navigation from "./Navigation";
 
 const Header = () => {
     return ( 
-        <header className="sticky top-0 w-full border-b-2 bg-drip-white border-drip-gray-light z-50">
+        <header className="sticky top-0 w-full border-b-2 bg-drip-white border-drip-gray-light z-50 relative">
               <nav className="flex flex-row justify-between py-6 custom-container">
                   <div className="flex flex-row items-center gap-4">
                       <Link href="/">
@@ -17,16 +18,8 @@ const Header = () => {
                     
                   </div>
 
-                  <div className="flex flex-row gap-4 items-center">
-                    <Link href="/docs/how-to-use">
-                         <a className="pr-3 text-sm border-r-2 md:text-lg border-drip-black/20 hover:text-drip-black/80">How to use</a>
-                    </Link>
-
-                    <a target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 pr-3 text-sm md:text-lg group hover:text-drip-black/80 border-r-2 border-drip-black/20" href="https://twitter.com/intent/tweet?url=https://khazifire.com&text=DripUI%20is%20a%20collection%20of%20free%20Tailwind%20CSS%20components%20that%20can%20be%20used%20in%20your%20next%20project.%20%0A-%20By%20@khazifire%0A"><i className="text-lg ri-twitter-line group-hover:-rotate-12 "></i> Share on twitter</a>
-                     
-                    <a target="_blank" rel="noreferrer" href="https://github.com/khazifire/DripUI"><i className="text-lg ri-github-line group-hover:scale-50 hover:cursor-pointer"></i></a>
-   
-                  </div>
+                   <Navigation />
+                 
               </nav>
           </header>
      );
