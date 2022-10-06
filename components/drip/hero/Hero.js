@@ -1,14 +1,6 @@
 
 import { Link } from 'react-router-dom'
 
-
-const navigation = [
-  { name: 'Product', to: '#' },
-  { name: 'Features', to: '#' },
-  { name: 'Marketplace', to: '#' },
-  { name: 'Company', to: '#' },
-]
-
 function Hero() {
   return (
     <div className="relative overflow-hidden font-[roboto] bg-gradient-to-b from-blue-400">
