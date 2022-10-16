@@ -19,15 +19,17 @@ const ComponentListing = ({featured=0}) => {
         },
         {
             'name':'headers',
-            'count': basicNavbars.length,
+
+            'count':2,
+
             'icon': 'ri-layout-top-line',
             'featured':true
         },
         {
             'name':'footers',
-            'count':undefined,
+            'count':1,
             'icon': 'ri-layout-bottom-line',
-            'featured':false
+            'featured':true
         },
       
     ]
