@@ -3,6 +3,8 @@ import { useRef,useState } from 'react';
 import { BasicBtns } from '../../components/drip/buttons/basicBtsns';
 import { ColoredShadowBtns } from '../../components/drip/buttons/coloredShadowBtns';
 import DefaultCard from '../../components/drip/cards/defaultCard';
+import StickyHeader from '../../components/drip/Headers/StickyHeader';
+import Header from '../../components/drip/header/Header';
 import Meta from '../../components/layout/meta';
 import PageHeading from '../../components/other/PageHeadings';
 
