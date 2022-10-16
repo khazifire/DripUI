@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
+import { basicNavbars } from "../drip/navbar/basicNavbars";
 
 const ComponentListing = ({featured=0}) => {
     const [list, setList] = useState(undefined)
@@ -18,7 +19,9 @@ const ComponentListing = ({featured=0}) => {
         },
         {
             'name':'headers',
+
             'count':2,
+
             'icon': 'ri-layout-top-line',
             'featured':true
         },
