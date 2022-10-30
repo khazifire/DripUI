@@ -50,12 +50,10 @@ export default function Cards() {
         <div
           ref={cardAreaRef1}
           onClick={() => copyToClipboard(cardAreaRef1, "card1")}
-          className="relative flex flex-col gap-2 ">
+          className="relative flex flex-col gap-2 "
+        >
           {/* <h2>Default Card</h2> */}
-          <div
-           
-            className="flex flex-col w-full max-w-sm gap-2 p-4 rounded-lg shadow shadow-drip-black/30"
-          >
+          <div className="flex flex-col w-full max-w-sm gap-2 p-4 rounded-lg shadow shadow-drip-black/30 cursor-pointer hover:shadow-lg">
             <h3 className="text-2xl font-semibold tracking-tight">
               Centering a div made easy with Tailwind CSS
             </h3>
@@ -76,12 +74,10 @@ export default function Cards() {
         <div
           ref={cardAreaRef2}
           onClick={() => copyToClipboard(cardAreaRef2, "card2")}
-          className="relative flex flex-col gap-2 ">
+          className="relative flex flex-col gap-2 "
+        >
           {/* <h2>Default Card + btn</h2> */}
-          <div
-           
-            className="flex flex-col w-full max-w-sm gap-2 p-4 rounded-lg shadow shadow-drip-black/30"
-          >
+          <div className="flex flex-col w-full max-w-sm gap-2 p-4 rounded-lg shadow shadow-drip-black/30 cursor-pointer hover:shadow-lg">
             <h3 className="text-2xl font-semibold tracking-tight">
               Centering a div made easy with Tailwind CSS
             </h3>
@@ -106,12 +102,10 @@ export default function Cards() {
         <div
           ref={cardAreaRef3}
           onClick={() => copyToClipboard(cardAreaRef3, "card3")}
-          className="relative flex flex-col gap-2 ">
+          className="relative flex flex-col gap-2 "
+        >
           {/* <h2>Default Card + btn</h2> */}
-          <div
-            
-            className="flex flex-col w-full max-w-sm gap-2 p-4 rounded-lg shadow shadow-drip-black/30"
-          >
+          <div className="flex flex-col w-full max-w-sm gap-2 p-4 rounded-lg shadow shadow-drip-black/30 cursor-pointer hover:shadow-lg">
             <h3 className="text-2xl font-semibold tracking-tight">
               Centering a div made easy with Tailwind CSS
             </h3>
@@ -148,11 +142,10 @@ export default function Cards() {
         <div
           ref={cardAreaRef4}
           onClick={() => copyToClipboard(cardAreaRef4, "card4")}
-          className="relative flex flex-col gap-2 ">
+          className="relative flex flex-col gap-2 "
+        >
           {/* <h2>Default Card</h2> */}
-          <div
-            className="flex flex-col w-full max-w-sm gap-2 rounded-lg shadow shadow-drip-black/30"
-          >
+          <div className="flex flex-col w-full max-w-sm gap-2 rounded-lg shadow shadow-drip-black/30 cursor-pointer hover:shadow-lg">
             <img
               className="object-cover object-center rounded-t-lg h-72"
               src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
