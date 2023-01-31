@@ -15,7 +15,7 @@ To copy the code for a component, all you need to do is click on it :)
 This project is a product of:
 
 - [Next.js](https://nextjs.org/)
-- [Tailwindcss](tailwindcss.com)
+- [Tailwindcss](https://tailwindcss.com/)
 
 ## :bulb: Want to contribute?
 We would love that! That is what open source is all about :tada: 
