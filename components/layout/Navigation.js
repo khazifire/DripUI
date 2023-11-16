@@ -53,7 +53,7 @@ const Navigation = () => {
             onClick={handleOnClick}
             href={TWITTER_LINK}
           >
-            <i className='text-lg ri-twitter-line group-hover:-rotate-12'></i>{' '}
+            <i className='text-lg ri-twitter-x-line group-hover:-rotate-12'></i>{' '}
             Share on twitter
           </a>
 
@@ -86,7 +86,7 @@ const Navigation = () => {
         className='inline-flex items-center gap-2 pr-3 text-sm md:text-lg group hover:text-drip-black/80 border-r-2 border-drip-black/20'
         href={TWITTER_LINK}
       >
-        <i className='text-lg ri-twitter-line group-hover:-rotate-12 '></i>{' '}
+        <i className='text-lg ri-twitter-x-line group-hover:-rotate-12 '></i>{' '}
         Share on twitter
       </a>
 
