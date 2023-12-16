@@ -1,12 +1,14 @@
 export default async function copyToClipboard(EL, setCopySuccess) {
     setCopySuccess(false);
     try {
-        await navigator.clipboard.writeText(EL.current.outerHTML);
-        return setCopySuccess(true);
+      await navigator.clipboard.writeText(EL.current.outerHTML);
+      setCopySuccess(true);
     } catch (error) {
-         setCopySuccess(false);
+      setCopySuccess(false);
     }
-  return  setTimeout(() => {
-        return setCopySuccess(false);
-    }, 4000);
+
+    // Reset copySuccess state after 1 seconds
+    setTimeout(() => {
+      setCopySuccess(false);
+    }, 1000);
 };
