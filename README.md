@@ -24,6 +24,15 @@ Found a typo on the site or this README file itself? Feature request? A bug? Fee
 
 To see and/or contribute to this project, please follow the steps below.
 
+### :point_down: Prerequisites
+Before installation, please make sure you have already installed the following tools:
+
+- [Nodejs](https://nodejs.org/en/download/package-manager)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+To check if you have nodejs and npm installed, run the commands: 
+`node -v` and `npm -v`
+
 ### :nut_and_bolt: Installation Steps
 1) Fork this repository
 2) Clone your fork of the repository
