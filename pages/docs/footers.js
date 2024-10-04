@@ -30,7 +30,7 @@ export default function Footers(){
             <Footer  />
           </div>
 
-          <div className="mb-12">
+          <div className="mb-12 h-full">
             <h3 className="mb-4"> Footer with a logo section and important links </h3>
             <LogoFooter />  
           </div>
