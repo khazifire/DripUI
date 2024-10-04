@@ -17,7 +17,7 @@ export default function Navbar({ navbar }) {
           
           <Desktop className={`w-6 h-6 cursor-pointer ${desktopPreview ? `fill-blue-600` : `fill-black`} transition-colors duration-200 ease-in`} onClick={()=> setDesktopPreview(true) } />
           <Mobile className={`w-6 h-6 cursor-pointer ${!desktopPreview ? `fill-blue-600` : `fill-black`} transition-colors duration-200 ease-in`} onClick={()=> setDesktopPreview(false) } />
-      </div>
+        </div>
         {navbar.category.map((nav) => (
           <nav ref={navEL} key={nav.id} className={desktopPreview ? nav.style : nav.mobileStyle}>
             <input

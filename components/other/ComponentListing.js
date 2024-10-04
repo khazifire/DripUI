@@ -25,7 +25,7 @@ const ComponentListing = ({ featured = 0 }) => {
     },
     {
       name: "footers",
-      count: 1,
+      count: 2,
       icon: "ri-layout-bottom-line",
       featured: true,
     },
