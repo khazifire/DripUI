@@ -1,8 +1,3 @@
-import Head from "next/head";
-import Link from "next/link";
-import { useRef, useState } from "react";
-import { BasicBtns } from "../../components/drip/buttons/basicBtsns";
-import { ColoredShadowBtns } from "../../components/drip/buttons/coloredShadowBtns";
 import { basicNavbars } from "../../components/drip/navbar/basicNavbars";
 import Navbar from "../../components/drip/navbar/Navbar";
 import Meta from "../../components/layout/meta";
