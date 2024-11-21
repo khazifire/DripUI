@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +10,6 @@ body {
   padding: 0;
   margin: 0;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -20,21 +19,20 @@ a {
   box-sizing: border-box;
 }
 
-@layer base{
-  *{
-    @apply font-Raleway leading-relaxed
+@layer base {
+  * {
+    @apply font-Raleway leading-relaxed;
   }
-  body{
-      @apply bg-drip-white
+  body {
+    @apply bg-drip-white;
   }
-  footer{
-    @apply flex h-16 py-2 border-t-2 border-drip-gray-light  justify-center items-center text-white text-lg mt-auto
+  footer {
+    @apply flex h-16 py-2 border-t-2 border-drip-gray-light  justify-center items-center text-white text-lg mt-auto;
   }
-  .custom-container{
-    @apply mx-8 md:container md:mx-auto 
+  .custom-container {
+    @apply mx-8 md:container md:mx-auto;
   }
-  .component-listing-a{
-    @apply relative inline-flex flex-col px-5 py-6  font-medium capitalize text-drip-black text-2xl  shadow-inner shadow-drip-black/30 rounded-lg hover:shadow-drip-black/50
+  .component-listing-a {
+    @apply relative inline-flex flex-col px-5 py-6  font-medium capitalize text-drip-black text-2xl  shadow-inner shadow-drip-black/30 rounded-lg hover:shadow-drip-black/50;
   }
-
 }
