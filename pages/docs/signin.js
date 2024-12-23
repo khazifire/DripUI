@@ -3,10 +3,10 @@ import { useState } from "react";
 import Meta from "../../components/layout/meta";
 import PageHeading from "../../components/other/PageHeadings";
 import Signin from "../../components/drip/signin/Signin";
+import Signup from "../../components/drip/signin/Signup";
 
 export default function Alerts() {
   const [CopySuccess, setCopySuccess] = useState(false);
-
   const signinComponentCode = `
   'use-client';
   import React, { useState } from "react";
@@ -80,6 +80,7 @@ export default function Alerts() {
   export default Signin;
   `;
 
+
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(signinComponentCode);
@@ -121,6 +122,9 @@ export default function Alerts() {
         )}
       </p>
           <Signin />
+        </div>
+        <div className="cursor-pointer relative">
+          <Signup/>
         </div>
       </section>
     </>

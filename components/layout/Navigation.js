@@ -40,7 +40,7 @@ const Navigation = () => {
           <div className={styleMobile} ref={ref}>
             <Link href="/docs/how-to-use">
               <a className="pr-3 text-sm border-b-2 border-drip-black/20 hover:text-drip-white/80">
-                How to use
+                Get Started
               </a>
             </Link>
 
@@ -53,14 +53,13 @@ const Navigation = () => {
               <i className="text-lg ri-twitter-line group-hover:-rotate-12"></i>{" "}
               Share on twitter
             </a>
-
             <a
               target="_blank"
               rel="noreferrer"
               href={GITHUB_LINK}
               className="inline-flex items-center gap-2 pr-3 text-sm group hover:text-drip-white/80"
             >
-              <i className="text-lg ri-github-line group-hover:-rotate-12"></i>
+              <i className="text-lg ri-github-line group-hover:-rotate-12 m-2"></i>
               Visit on Github
             </a>
           </div>
@@ -72,22 +71,21 @@ const Navigation = () => {
   return (
     <div className="flex flex-row gap-4 items-center">
       <Link href="/docs/how-to-use">
-        <a className="pr-3 text-sm border-r-2 md:text-lg border-drip-black/20 hover:text-drip-black/80">
-          How to use
+        <a className="pr-3 text-sm font-semibold md:text-lg border-drip-black/20 hover:text-drip-black/80">
+          Get Started
         </a>
       </Link>
       <div>
         <a
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center text-sm md:text-lg group hover:text-drip-black/80 border-r-2 border-drip-black/20"
+          className="inline-flex items-center font-medium text-sm md:text-lg group hover:text-drip-black/80 border-drip-black/20"
           href={TWITTER_LINK}
         >
           <i className="text-lg ri-twitter-line group-hover:-rotate-12 "></i>{" "}
           Share on twitter
         </a>
       </div>
-
       <a
         target="_blank"
         rel="noreferrer"
