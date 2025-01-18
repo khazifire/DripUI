@@ -6,9 +6,6 @@ const TWITTER_LINK =
   "https://twitter.com/intent/tweet?url=https://khazifire.com&text=DripUI%20is%20a%20collection%20of%20free%20Tailwind%20CSS%20components%20that%20can%20be%20used%20in%20your%20next%20project.%20%0A-%20By%20@khazifire%0A";
 const GITHUB_LINK = "https://github.com/khazifire/DripUI";
 
-console.log("afs")
-console.log("Navigation component loaded");
-
 const Navigation = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const { width } = useWindowDimensions();
