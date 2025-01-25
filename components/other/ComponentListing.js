@@ -40,17 +40,19 @@ const ComponentListing = ({ featured = 0 }) => {
       count: 1,
       icon: "ri-login-box-line",
       featured: true,
+    },
+    {
+      name: "modals",
+      count: 3,
+      icon: "ri-login-box-line",
+      featured: true,
     }
   ];
 
-  useEffect(() => {
-    if (featured != 0) {
-      setList([...components.slice(0, featured)]);
-    }
-  }, [featured]);
+ 
 
   return (
-    <div className="p-4 grid grid-cols-2 gap-4 my-1 md:grid-cols-4 xl:grid-cols-6">
+    <div className="p-4 grid grid-cols-2 gap-4 my-1 md:grid-cols-4 xl:grid-cols-7">
       {(list || components)?.map((component) => (
         <Link
           key={component.name}
