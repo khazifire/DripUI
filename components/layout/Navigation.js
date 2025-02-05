@@ -50,7 +50,7 @@ const Navigation = () => {
               className="inline-flex items-center gap-2 pr-3 text-sm group hover:text-drip-white/80 border-b-2 border-drip-black/20"
               href={TWITTER_LINK}
             >
-              <i className="text-lg ri-twitter-line group-hover:-rotate-12"></i>{" "}
+              <i className="text-lg ri-twitter-line group-hover:-rotate-12 pr-3"></i>{" "}
               Share on twitter
             </a>
 
@@ -84,7 +84,7 @@ const Navigation = () => {
           href={TWITTER_LINK}
         >
           <i className="text-lg ri-twitter-line group-hover:-rotate-12 "></i>{" "}
-          Share on twitter
+        <span className="mr-2">Share on twitter</span>  
         </a>
       </div>
 
