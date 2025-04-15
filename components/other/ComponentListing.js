@@ -40,6 +40,12 @@ const ComponentListing = ({ featured = 0 }) => {
       count: 1,
       icon: "ri-login-box-line",
       featured: true,
+    },
+    {
+      name: "grids",
+      count: 1,
+      icon: "ri-layout-2-line",
+      featured: true,
     }
   ];
 

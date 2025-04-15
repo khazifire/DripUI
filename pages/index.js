@@ -18,7 +18,7 @@ export default function Home() {
       <section className='mt-16 md:mt-4 xl:px-6'>
         <h2 className='text-3xl'>Components</h2>
         <p className="mt-2 mb-4 text-lg text-drip-gray-dark">UI Tailwind CSS components, that will help you save your time</p>
-        <ComponentListing featured={6}/>
+        <ComponentListing featured={7}/>
       </section>
     </>
   )
