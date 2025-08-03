@@ -1,8 +1,8 @@
 import { useState, useRef } from "react";
 import Meta from "../../components/layout/meta";
 import PageHeading from "../../components/other/PageHeadings";
-import BasicModal from "../../components/drip/modal/BasicModal";
-import ConfirmationModal from "../../components/drip/modal/ConfirmationModal";
+import BasicModal from "../../components/drip/modal/basicModal";
+import ConfirmationModal from "../../components/drip/modal/confirmationModal";
 
 const modals = () => {
   const [CopySuccess, setCopySuccess] = useState(false);
