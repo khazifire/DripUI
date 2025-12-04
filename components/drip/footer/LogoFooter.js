@@ -4,7 +4,7 @@ function LogoFooter() {
 
     const footerRef = useRef(null);
     const [copySuccess, setCopySuccess] = useState(false);
-    console.log(copySuccess)
+    
     return (
         <div className="flex flex-col gap-y-4 ">
             <div 
