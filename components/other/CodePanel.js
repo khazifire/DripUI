@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Editor from '@monaco-editor/react';
-import sdk from '@stackblitz/sdk';
 
 export const ActiveVariantContext = React.createContext();
 
@@ -50,68 +49,6 @@ export default function CodePanel({ children, snippets, title }) {
     }
   };
 
-  const openStackBlitz = () => {
-    const isReact = activeTab === 'react' || activeTab === 'nextjs';
-    sdk.openProject({
-      title: title || 'DripUI Component',
-      description: 'DripUI Component Code Sandbox',
-      template: isReact ? 'create-react-app' : 'html-css',
-      files: isReact
-        ? {
-            'src/App.js': currentCode,
-            'src/index.js': `import React from "react";\\nimport { createRoot } from "react-dom/client";\\nimport App from "./App";\\n\\nconst rootElement = document.getElementById("root");\\nconst root = createRoot(rootElement);\\n\\nroot.render(<App />);`,
-            'public/index.html': `<div id="root"></div>`,
-          }
-        : {
-            'index.html': currentCode,
-            'index.js': `// Add your JavaScript here`,
-          },
-      settings: {
-        compile: { trigger: 'auto', clearConsole: false },
-      },
-    });
-  };
-
-  const openCodeSandbox = () => {
-    const isReact = activeTab === 'react' || activeTab === 'nextjs';
-    let files = {};
-    if (isReact) {
-      files = {
-        'package.json': {
-          content: {
-            dependencies: { react: 'latest', 'react-dom': 'latest' },
-          },
-        },
-        'src/App.js': { content: currentCode },
-        'src/index.js': {
-          content: `import React from "react";\\nimport { createRoot } from "react-dom/client";\\nimport App from "./App";\\n\\nconst rootElement = document.getElementById("root");\\nconst root = createRoot(rootElement);\\n\\nroot.render(<App />);`,
-        },
-        'public/index.html': { content: `<div id="root"></div>` },
-      };
-    } else {
-      files = {
-        'package.json': { content: { dependencies: {} } },
-        'index.html': { content: currentCode },
-      };
-    }
-    
-    const parameters = btoa(JSON.stringify({ files }));
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = 'https://codesandbox.io/api/v1/sandboxes/define';
-    form.target = '_blank';
-    
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = 'parameters';
-    input.value = parameters;
-    
-    form.appendChild(input);
-    document.body.appendChild(form);
-    form.submit();
-    form.remove();
-  };
-
   const activeName = currentSnippetGroup.name || activeVariant;
 
   return (
@@ -157,18 +94,6 @@ export default function CodePanel({ children, snippets, title }) {
               >
                 <i className={copied ? "ri-check-line" : "ri-clipboard-line"}></i>
                 {copied ? 'Copied!' : 'Copy'}
-              </button>
-              <button
-                onClick={openStackBlitz}
-                className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                <i className="ri-flashlight-line"></i> StackBlitz
-              </button>
-              <button
-                onClick={openCodeSandbox}
-                className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                <i className="ri-code-box-line"></i> CodeSandbox
               </button>
             </div>
           </div>
