@@ -5,6 +5,8 @@ import Button from "../../components/drip/buttons/Button";
 import { ColoredShadowBtns } from "../../components/drip/buttons/coloredShadowBtns";
 import Meta from "../../components/layout/meta";
 import PageHeading from "../../components/other/PageHeadings";
+import CodePanel from "../../components/other/CodePanel";
+import { BasicBtnsSnippets, BasicIconsBtnsSnippets, ColoredShadowBtnsSnippets } from "../../components/drip/buttons/buttonsCodeSnippets";
 
 export default function Buttons() {
   return (
@@ -24,20 +26,26 @@ export default function Buttons() {
         }
       />
 
-      <section className="grid grid-cols-1 gap-16 md:grid-cols-2">
-        <div className="flex flex-col gap-4">
+      <section className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+        <div className="flex flex-col gap-12">
           {BasicBtns.map((btn) => (
-            <Button {...btn} key={btn.type} text="" />
+            <CodePanel title="Basic Buttons" snippets={BasicBtnsSnippets} key={btn.type}>
+              <Button {...btn} text="" />
+            </CodePanel>
           ))}
 
           {BasicBtns.map((btn, i) => (
-            <Button {...btn} key={btn.type + i} icons text=" Icons" />
+            <CodePanel title="Basic Buttons with Icons" snippets={BasicIconsBtnsSnippets} key={btn.type + i}>
+              <Button {...btn} icons text=" Icons" />
+            </CodePanel>
           ))}
         </div>
 
-        <div className="flex flex-col gap-4 ">
+        <div className="flex flex-col gap-12">
           {ColoredShadowBtns.map((btn) => (
-            <Button {...btn} key={btn.type} text="" />
+            <CodePanel title="Colored Shadow Buttons" snippets={ColoredShadowBtnsSnippets} key={btn.type}>
+              <Button {...btn} text="" />
+            </CodePanel>
           ))}
         </div>
       </section>

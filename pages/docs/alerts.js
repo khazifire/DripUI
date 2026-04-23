@@ -9,28 +9,10 @@ import {
   IconAlert,
 } from "../../components/drip/alert/alertData";
 
-export default function Alerts() {
-  const [CopySuccess, setCopySuccess] = useState(false);
-  const [alertId, setAlertId] = useState("");
-  const alertDataRef = useRef({});
+import CodePanel, { CodeVariant } from "../../components/other/CodePanel";
+import { SolidAlertSnippets, SoftColorSnippets, RoundBorderSnippets, IconAlertSnippets } from "../../components/drip/alert/alertCodeSnippets";
 
-  const copyToClipboard = async (el, btnId) => {
-    try {
-      const selectedDiv = alertDataRef.current[btnId];
-      if (selectedDiv) {
-        await navigator.clipboard.writeText(selectedDiv.outerHTML);
-        setCopySuccess(true);
-        setAlertId(el);
-      }
-    } catch (error) {
-      setCopySuccess(false);
-      setAlertId("");
-    }
-    setTimeout(() => {
-      setCopySuccess(false);
-      setAlertId("");
-    }, 4000);
-  };
+export default function Alerts() {
 
   return (
     <>
@@ -50,119 +32,59 @@ export default function Alerts() {
         }
       />
 
-      <section className="grid grid-cols-1 gap-16 md:grid-cols-2">
+      <section className="grid grid-cols-1 gap-16 md:grid-cols-1 lg:grid-cols-2">
         {/* Solid Color Alerts */}
-        <div>
-          <p class="pb-4 font-bold">
-            Solid color alerts &nbsp;{" "}
-            {CopySuccess && alertId === "Solid" ? (
-              <span className=" inline-flex gap-1 text-sm font-thin">
-                Copied! <i className="ri-chat-smile-2-line animate-bounce"></i>{" "}
-              </span>
-            ) : (
-              ""
-            )}
-          </p>
-
-          <div className="border rounded-sm shadow-sm p-4 bg-white-100 relative flex flex-col gap-2">
+        <CodePanel title="Solid Color Alerts" snippets={SolidAlertSnippets}>
+          <div className="w-full relative flex flex-col gap-2">
             {SolidAlert.map((btn) => (
-              <div
-                key={btn.id}
-                class={btn.style}
-                role="alert"
-                onClick={() => copyToClipboard("Solid", btn.id)}
-                ref={(ref) => (alertDataRef.current[btn.id] = ref)}
-              >
-                <span class="font-bold">{btn.span}</span> {btn.text}
-              </div>
+              <CodeVariant id={btn.id} key={btn.id}>
+                <div className={btn.style} role="alert">
+                  <span className="font-bold">{btn.span}</span> {btn.text}
+                </div>
+              </CodeVariant>
             ))}
           </div>
-        </div>
+        </CodePanel>
 
         {/* Soft Color Alerts */}
-        <div>
-          <p class="pb-4 font-bold">
-            Soft color alerts. &nbsp;{" "}
-            {CopySuccess && alertId === "Soft" ? (
-              <span className=" inline-flex gap-1 text-sm font-thin">
-                Copied! <i className="ri-chat-smile-2-line animate-bounce"></i>{" "}
-              </span>
-            ) : (
-              ""
-            )}
-          </p>
-
-          <div className="border rounded-sm shadow-sm p-4 bg-white-100 relative flex flex-col gap-2">
+        <CodePanel title="Soft Color Alerts" snippets={SoftColorSnippets}>
+          <div className="w-full relative flex flex-col gap-2">
             {SoftColor.map((btn) => (
-              <div
-                key={btn.id}
-                class={btn.style}
-                role="alert"
-                onClick={() => copyToClipboard("Soft", btn.id)}
-                ref={(ref) => (alertDataRef.current[btn.id] = ref)}
-              >
-                <span class="font-bold">{btn.span}</span> {btn.text}
-              </div>
+              <CodeVariant id={btn.id} key={btn.id}>
+                <div className={btn.style} role="alert">
+                  <span className="font-bold">{btn.span}</span> {btn.text}
+                </div>
+              </CodeVariant>
             ))}
           </div>
-        </div>
+        </CodePanel>
 
         {/* Alerts with Round Border */}
-        <div>
-          <p class="pb-4 font-bold">
-            Round Border Alerts. &nbsp;{" "}
-            {CopySuccess && alertId === "Round" ? (
-              <span className=" inline-flex gap-1 text-sm font-thin">
-                Copied! <i className="ri-chat-smile-2-line animate-bounce"></i>{" "}
-              </span>
-            ) : (
-              ""
-            )}
-          </p>
-
-          <div className="border rounded-sm shadow-sm p-4 bg-white-100 relative flex flex-col gap-2">
+        <CodePanel title="Round Border Alerts" snippets={RoundBorderSnippets}>
+          <div className="w-full relative flex flex-col gap-2">
             {RoundBorder.map((btn) => (
-              <div
-                key={btn.id}
-                class={btn.style}
-                role="alert"
-                onClick={() => copyToClipboard("Round", btn.id)}
-                ref={(ref) => (alertDataRef.current[btn.id] = ref)}
-              >
-                <span class="font-bold">{btn.span}</span> {btn.text}
-              </div>
+              <CodeVariant id={btn.id} key={btn.id}>
+                <div className={btn.style} role="alert">
+                  <span className="font-bold">{btn.span}</span> {btn.text}
+                </div>
+              </CodeVariant>
             ))}
           </div>
-        </div>
+        </CodePanel>
 
         {/* Alerts with Icon */}
-        <div>
-          <p class="pb-4 font-bold">
-            Round Border with Icons Alerts. &nbsp;{" "}
-            {CopySuccess && alertId === "Icons" ? (
-              <span className=" inline-flex gap-1 text-sm font-thin">
-                Copied! <i className="ri-chat-smile-2-line animate-bounce"></i>{" "}
-              </span>
-            ) : (
-              ""
-            )}
-          </p>
-
-          <div className="border rounded-sm shadow-sm p-4 bg-white-100 relative flex flex-col gap-2">
+        <CodePanel title="Round Border with Icons Alerts" snippets={IconAlertSnippets}>
+          <div className="w-full relative flex flex-col gap-2">
             {IconAlert.map((btn) => (
-              <div
-                key={btn.id}
-                class={`${btn.style} flex flex-row items-center gap-2`}
-                role="alert"
-                onClick={() => copyToClipboard("Icons", btn.id)}
-                ref={(ref) => (alertDataRef.current[btn.id] = ref)}
-              >
-                <i className={`${btn.icon} text-sm font-bold`}></i>
-                <span class="font-bold">{btn.span}</span> {btn.text}
-              </div>
+              <CodeVariant id={btn.id} key={btn.id}>
+                <div className={`${btn.style} flex flex-row items-center gap-2`} role="alert">
+                  <i className={`${btn.icon} text-sm font-bold`}></i>
+                  <span className="font-bold">{btn.span}</span> {btn.text}
+                </div>
+              </CodeVariant>
             ))}
           </div>
-        </div>
+        </CodePanel>
       </section>
     </>
   );

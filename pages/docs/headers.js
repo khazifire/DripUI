@@ -2,13 +2,15 @@ import { basicNavbars } from "../../components/drip/navbar/basicNavbars";
 import Navbar from "../../components/drip/navbar/Navbar";
 import Meta from "../../components/layout/meta";
 import PageHeading from "../../components/other/PageHeadings";
+import CodePanel from "../../components/other/CodePanel";
+import { NavbarsSnippets } from "../../components/drip/navbar/navbarsCodeSnippets";
 
-export default function Buttons() {
+export default function Headers() {
 
   return (
     <section className="lg:px-12 px-3 ">
       <Meta
-        title={"DripUI - Tailwind CSS Buttons"}
+        title={"DripUI - Tailwind CSS Headers"}
         description={
           "DripUI offers a wide range of responsive NavBars, including outlined navbar, animated hamburger menus, ...."
         }
@@ -23,10 +25,12 @@ export default function Buttons() {
       />
 
       <section className="flex flex-col gap-6">
-          <h2 className="text-3xl font-semibold">Basic Navbar&apos;s</h2>
-        <div className="flex flex-col lg:gap-8">
-          {basicNavbars.map((navbar, index) => (<Navbar key={"Nav" + index} {...{ navbar }} />))}
-        </div>
+          <h2 className="text-3xl font-semibold mb-6">Basic Navbars</h2>
+          <CodePanel title="Navbars" snippets={NavbarsSnippets}>
+            <div className="flex flex-col w-full lg:gap-14">
+              {basicNavbars.map((navbar, index) => (<Navbar key={"Nav" + index} {...{ navbar }} />))}
+            </div>
+          </CodePanel>
       </section>
     </section>
   );
