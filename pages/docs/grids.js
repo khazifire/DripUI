@@ -1,7 +1,8 @@
 import Meta from "../../components/layout/meta"
 import PageHeading from "../../components/other/PageHeadings"
-import LogoFooter from "../../components/drip/footer/LogoFooter"
 import AnimatedGrid from "../../components/drip/grid/animatedGrid"
+import CodePanel, { CodeVariant } from "../../components/other/CodePanel"
+import { AnimatedGridSnippets } from "../../components/drip/grid/gridCodeSnippets"
 
 export default function Grids(){
   return(
@@ -25,10 +26,13 @@ export default function Grids(){
       <section className="flex flex-col gap-6">
         <h2 className="text-3xl font-semibold">Animated Grid</h2>
         
-          {/* Grid #1 */}
           <div className="mb-12">
             <h3 className="mb-4"> A dynamic and visually engaging way to highlight key features or services on your website. </h3>
-            <AnimatedGrid  />
+            <CodePanel title="Animated Grid" snippets={AnimatedGridSnippets}>
+              <CodeVariant id="default">
+                <AnimatedGrid />
+              </CodeVariant>
+            </CodePanel>
           </div>
 
       </section>

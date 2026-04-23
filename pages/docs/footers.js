@@ -2,6 +2,8 @@ import Meta from "../../components/layout/meta"
 import PageHeading from "../../components/other/PageHeadings"
 import Footer from "../../components/drip/footer/Footer"
 import LogoFooter from "../../components/drip/footer/LogoFooter"
+import CodePanel, { CodeVariant } from "../../components/other/CodePanel"
+import { BasicFooterSnippets, LogoFooterSnippets } from "../../components/drip/footer/footersCodeSnippets"
 
 export default function Footers(){
   return(
@@ -27,12 +29,20 @@ export default function Footers(){
           {/* Foorter #1 */}
           <div className="mb-12">
             <h3 className="mb-4"> Basic strip footer with links and Copyright </h3>
-            <Footer  />
+            <CodePanel title="Basic Footer" snippets={BasicFooterSnippets}>
+              <CodeVariant id="default">
+                <Footer  />
+              </CodeVariant>
+            </CodePanel>
           </div>
 
           <div className="mb-12 h-full">
             <h3 className="mb-4"> Footer with a logo section and important links </h3>
-            <LogoFooter />  
+            <CodePanel title="Logo Footer" snippets={LogoFooterSnippets}>
+              <CodeVariant id="default">
+                <LogoFooter />  
+              </CodeVariant>
+            </CodePanel>
           </div>
 
       </section>
