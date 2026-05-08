@@ -46,7 +46,13 @@ const ComponentListing = ({ featured = 0 }) => {
       count: 1,
       icon: "ri-layout-2-line",
       featured: true,
-    }
+    },
+    {
+      name: "modals",
+      count: 2,
+      icon: "ri-window-line",
+      featured: true,
+    },
   ];
 
   useEffect(() => {

@@ -63,7 +63,6 @@ export default function Alerts() {
               ""
             )}
           </p>
-
           <div className="border rounded-sm shadow-sm p-4 bg-white-100 relative flex flex-col gap-2">
             {SolidAlert.map((btn) => (
               <div
@@ -72,11 +71,10 @@ export default function Alerts() {
                 role="alert"
                 onClick={() => copyToClipboard("Solid", btn.id)}
                 ref={(ref) => (alertDataRef.current[btn.id] = ref)}
-              >
-                <span class="font-bold">{btn.span}</span> {btn.text}
-              </div>
+              ></div>
             ))}
-          </div>
+          </div>{" "}
+          <span class="font-bold">{btn.span}</span> {btn.text}
         </div>
 
         {/* Soft Color Alerts */}
