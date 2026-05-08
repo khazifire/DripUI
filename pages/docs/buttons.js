@@ -5,6 +5,7 @@ import Button from "../../components/drip/buttons/Button";
 import { ColoredShadowBtns } from "../../components/drip/buttons/coloredShadowBtns";
 import Meta from "../../components/layout/meta";
 import PageHeading from "../../components/other/PageHeadings";
+import { GradientBtns } from "../../components/drip/buttons/gradientButton";
 
 export default function Buttons() {
   return (
@@ -39,7 +40,13 @@ export default function Buttons() {
           {ColoredShadowBtns.map((btn) => (
             <Button {...btn} key={btn.type} text="" />
           ))}
+
+          {/* Added Gradient button */}
+          {GradientBtns.map((btn) => (
+            <Button {...btn} key={btn.type} text="" />
+          ))}
         </div>
+
       </section>
     </>
   );
