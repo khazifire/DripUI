@@ -15,9 +15,12 @@ export default function Home() {
         />
       
       <HeroSection />
+    
       <section className='mt-16 md:mt-4 xl:px-6'>
+        <div className="flex flex-col p-4 items-start gap-4 mb-4">
         <h2 className='text-3xl'>Components</h2>
         <p className="mt-2 mb-4 text-lg text-drip-gray-dark">UI Tailwind CSS components, that will help you save your time</p>
+        </div>
         <ComponentListing featured={7}/>
       </section>
     </>
