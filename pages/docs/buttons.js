@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { BasicBtns } from "../../components/drip/buttons/basicBtsns";
 import Button from "../../components/drip/buttons/Button";
 import { ColoredShadowBtns } from "../../components/drip/buttons/coloredShadowBtns";
+import { IconBtns } from "../../components/drip/buttons/iconBtns";
 import Meta from "../../components/layout/meta";
 import PageHeading from "../../components/other/PageHeadings";
 
@@ -40,6 +41,12 @@ export default function Buttons() {
             <Button {...btn} key={btn.type} text="" />
           ))}
         </div>
+      </section>
+
+      <section className="grid grid-cols-1 gap-16 mt-16 md:grid-cols-2">
+        {IconBtns.map((btn) => (
+          <Button {...btn} key={btn.type} text="" />
+        ))}
       </section>
     </>
   );
